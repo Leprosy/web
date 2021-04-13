@@ -1,10 +1,10 @@
-const https = require('https');
+const fetch = require('node-fetch')
 
 exports.handler = async function(event, context) {
     let text = "";
 
     try {
-         text = https.request("https://quotes15.p.rapidapi.com/quotes/random/", {
+         text = fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
             method: 'GET', 
             headers: {
                 "x-rapidapi-key": "AWKeh1OccaAbR24s3PSUbi2NqBEoBEeW",

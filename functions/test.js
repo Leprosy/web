@@ -4,7 +4,7 @@ exports.handler = async function(event, context) {
     let text = "";
 
     try {
-         text = fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
+        const res = await fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
             method: 'GET', 
             headers: {
                 "x-rapidapi-key": "AWKeh1OccaAbR24s3PSUbi2NqBEoBEeW",
@@ -12,6 +12,7 @@ exports.handler = async function(event, context) {
                 "useQueryString": true
             }
         });
+        text = await res.text();
     } catch(e) {
         text = `Error fetching content: ${e}`;
     }

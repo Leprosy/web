@@ -1,7 +1,22 @@
 exports.handler = async function(event, context) {
-    // your server-side functionality
+    let text = "";
+
+    try {
+        const res = fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
+            method: 'GET', 
+            headers: {
+                "x-rapidapi-key": "AWKeh1OccaAbR24s3PSUbi2NqBEoBEeW",
+                "x-rapidapi-host": "quotes15.p.rapidapi.com",
+                "useQueryString": true
+            }
+        });
+        text = res.text();
+    } catch(e) {
+        text = `Error fetching content: ${e}`;
+    }
+
     return {
         statusCode: 200,
-        body: JSON.stringify({event, context})
+        body: text
     };
 }

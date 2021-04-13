@@ -1,1 +1,16 @@
 <h1> This is test </h1>
+<h2></h2>
+
+<script>
+  const getQuote = async () => {
+    let text = "";
+    try {
+      const res = await fetch("https://l3pro.netlify.app/.netlify/functions/test");
+      text = await res.text();
+    } catch(e) {
+      text = `Error fetching: ${e}`;
+    } finally {
+      document.getElementsByTagName("h2")[0].innerHTML = text
+    }
+  }
+</script>

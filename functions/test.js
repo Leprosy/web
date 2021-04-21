@@ -1,9 +1,9 @@
-const fetch = require('node-fetch')
+//const fetch = require('node-fetch')
 
 exports.handler = async function(event, context) {
     let text = "";
 
-    try {
+    /* try {
         const res = await fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
             method: 'GET', 
             headers: {
@@ -15,10 +15,10 @@ exports.handler = async function(event, context) {
         text = await res.text();
     } catch(e) {
         text = `Error fetching content: ${e}`;
-    }
+    } */
 
     return {
         statusCode: 200,
-        body: text
+        body: "HELLO"
     };
 }

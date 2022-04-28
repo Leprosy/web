@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html>
-<title>HTML Tutorial</title>
-<body>
+  <head>
+    <base href="https://www.northwestgeorgianews.com/content/tncms/live/" />
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+    <style>
+      h1 { text-decoration: underline; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1> This is a test website, hello! </h1>
+    <h2></h2>
 
-</body>
+    <p>This has some dynamic generated content</p>
+    <p>This should be enough to test</p>
+    <hr/>
+
+    <p>Absolute paths</p>
+    <img src="https://l3pro.netlify.app/celes.jpeg" width="50" height="100" />
+    <img src="https://l3pro.netlify.app/img/guitar.jpeg" width="50" height="100" />
+        <img src="https://l3pro.netlify.app/img/mk2.jpg" width="50" height="100" />
+            <img src="https://l3pro.netlify.app/img/yo.png" width="50" height="100" />
+
+<p>Relative paths</p>
+    <img src="celes.jpeg" width="50" height="100" />
+    <img src="img/guitar.jpeg" width="50" height="100" />
+    <img src="img/mk2.jpg" width="50" height="100" />
+                <img src="img/yo.png" width="50" height="100" />
+
+    <table border="1">
+      <tr>
+        <th>title</th>
+        <td>content</td>
+      </tr>
+      <tr>
+        <th><a href="/">title</th>
+        <td><a href="/">content</a></td>
+      </tr>
+      <tr>
+        <th>title</th>
+        <td>content</td>
+      </tr>
+      <tr>
+        <th><a href="/">title</th>
+        <td><a href="/">content 1</a><br><a href="/">content 2</a><br><a href="/">content 3</a><br><a href="/">content 4</a></td>
+      </tr>
+    </table>
+    <script>
+      const getQuote = async () => {
+        let text = "";
+        try {
+          const res = await fetch("https://l3pro.netlify.app/.netlify/functions/test");
+          text = await res.text();
+        } catch(e) {
+          text = `Error fetching: ${e}`;
+        } finally {
+          document.getElementsByTagName("h2")[0].innerHTML = text
+        }
+      }
+
+      setTimeout(getQuote, 2000);
+    </script>
+  </body>
 </html>

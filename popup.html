@@ -1,0 +1,51 @@
+<html>
+
+    <head>
+
+
+        <style>
+            body,
+            .button {
+                font-size: 16px;
+            }
+
+            .button {
+                background-color: #00A82D;
+                color: #fff;
+                padding: 15px 20px;
+                border: none;
+                border-radius: 3px;
+            }
+
+            .button:hover {
+                background-color: #008f26
+            }
+
+            @media screen and (max-width: 800px) {
+
+                body,
+                .button {
+                    font-size: 25px;
+                }
+            }
+        </style>
+    </head>
+
+    <body style="padding:0;margin:0">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+        <div style="display:flex;flex-direction:column;height:100vh">
+            <div style="background-color: #00A82D; font-family: arial; padding: 10px 20px">
+                <img width="120px" style=" filter: brightness(0) invert(1);"
+                    src="https://evernote.com/img/logo/evernote/primary.svg">
+            </div>
+            <div style="background-color: #eaeeef; flex: 1;font-family: arial; padding: 30px 40px">
+                <div style="background-color: #fff; padding: 20px; text-align: center;border:1px solid #bdbdbd;">
+                    <p>Authorization successful!</p>
+                    <button class="button" onclick="top.window.close()">Close this window</button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

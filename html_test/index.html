@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="alternate" type="application/json+oembed" href="https://www.youtube.com/oembed?format=json&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DmD_z0eWzdeU" title="Parte de Nuestra Historia: Turbosoft (Atari)"><link rel="alternate" type="text/xml+oembed" href="https://www.youtube.com/oembed?format=xml&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DmD_z0eWzdeU" title="Parte de Nuestra Historia: Turbosoft (Atari)"><link rel="image_src" href="https://i.ytimg.com/vi/mD_z0eWzdeU/maxresdefault.jpg">
+    <style>
+      h1 { text-decoration: underline; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1> This is a test website, hello!!! </h1>
+    <h2></h2>
+
+    <p>This has some dynamic generated content</p>
+    <p>This should be enough to test</p>
+    <p>Image link <a href="https://l3pro.netlify.app/celes.jpeg">Here</a></p>
+    <hr/>
+
+    <p>Absolute paths</p>
+    <img src="https://l3pro.netlify.app/celes.jpeg" width="50" height="100" />
+    <img src="https://l3pro.netlify.app/img/guitar.jpeg" width="50" height="100" />
+        <img src="https://l3pro.netlify.app/img/mk2.jpg" width="50" height="100" />
+            <img src="https://l3pro.netlify.app/img/yo.png" width="50" height="100" />
+
+<p>Relative paths</p>
+    <img src="celes.jpeg" width="50" height="100" />
+    <img src="img/guitar.jpeg" width="50" height="100" />
+    <img src="img/mk2.jpg" width="50" height="100" />
+                <img src="img/yo.png" width="50" height="100" />
+    <p>Youtube</p>
+    <div class="ooo3c9-0 cmUFVa align--bleed has-video media-large video-embed embed-frame"><span class="flex-video widescreen"><iframe data-src="https://kotaku.com/embed/inset/iframe?id=youtube-video-FW1SzMv0jSQ&amp;start=0" data-chomp-id="FW1SzMv0jSQ" data-recommend-id="youtube://FW1SzMv0jSQ" id="youtube-FW1SzMv0jSQ" data-recommended="false" width="800" height="450" class="core-inset" frameborder="0" scrolling="no" allowfullscreen="" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" src="https://kotaku.com/embed/inset/iframe?id=youtube-video-FW1SzMv0jSQ&amp;start=0"></iframe><span data-chomp-id="FW1SzMv0jSQ" data-recommend-id="youtube://FW1SzMv0jSQ" id="youtube-FW1SzMv0jSQ" data-recommended="false" class="js_recommend"></span></span><figcaption class="sc-1ptbguh-0 hxeMec caption">No Man’s Sky Fractal Update Trailer</figcaption></div>
+    
+    <table border="1">
+      <tr>
+        <th>title</th>
+        <td>content</td>
+      </tr>
+      <tr>
+        <th><a href="/">title</th>
+        <td><a href="/">content</a></td>
+      </tr>
+      <tr>
+        <th>title</th>
+        <td>content</td>
+      </tr>
+      <tr>
+        <th><a href="/">title</th>
+        <td><a href="/">content 1</a><br><a href="/">content 2</a><br><a href="/">content 3</a><br><a href="/">content 4</a></td>
+      </tr>
+    </table>
+    <a href="https://l3pro.netlify.app">Regular</a> | <a href="https://l3pro.netlify.app/test.html">Weird</a> 
+    <script>
+      const getQuote = async () => {
+        let text = "";
+        try {
+          const res = await fetch("https://l3pro.netlify.app/.netlify/functions/test");
+          text = await res.text();
+        } catch(e) {
+          text = `Error fetching: ${e}`;
+        } finally {
+          document.getElementsByTagName("h2")[0].innerHTML = text
+        }
+      }
+
+      setTimeout(getQuote, 2000);
+    </script>
+  </body>
+</html>
